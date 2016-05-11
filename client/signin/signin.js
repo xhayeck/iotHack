@@ -2,12 +2,12 @@ angular.module('neighborhoodwatch.signin', [])
 
 .controller('signin', function($scope, $state) {
 
-  $scope.username = 'username';
+  $scope.username = '';
 
-  $scope.password = 'password';
+  $scope.password = '';
 
   $scope.submit = function() {
-    
+    console.log($scope.username, $scope.password);
   };
 
 });
