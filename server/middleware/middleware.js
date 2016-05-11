@@ -1,6 +1,11 @@
 'use strict'
 
 module.exports = function(app, express){
-  const dataRouter = express.Router();
-  // require('.routes/dataRoutes.js')(dataRouter);
+
+  var crimeRouter = express.Router();
+
+  app.use('/api/crimes', crimeRouter);
+
+  require('../crime/crimeRoutes.js')(crimeRouter);
+
 }
