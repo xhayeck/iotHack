@@ -1,4 +1,13 @@
-angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'neighborhoodwatch.signin', 'neighborhoodwatch.newuser', 'neighborhoodwatch.crimeinfo'])
+angular.module('neighborhoodwatch', [
+  'ui.router',
+  'neighborhoodwatch.home', 
+  'neighborhoodwatch.signin', 
+  'neighborhoodwatch.newuser',
+  'neighborhoodwatch.video',
+  'neighborhoodwatch.crimeinfo',
+  'neighborhoodwatch.crimeform',
+  'neighborhoodwatch.crimeServices'
+  ])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -29,6 +38,11 @@ angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'nei
       url: '/crimeinfo',
       templateUrl: 'crimeinfo/crimeinfo.html',
       controller: 'crimeInfo'
+    })
+    .state('crimeForm', {
+      url: '/crimeform',
+      templateUrl: 'crimeform/crimeform.html',
+      controller: 'crimeform'
     });
 
 });
