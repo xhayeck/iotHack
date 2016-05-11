@@ -1,4 +1,4 @@
-angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home'])
+angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'neighborhoodwatch.signin'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -12,7 +12,8 @@ angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home'])
     })
     .state('signIn', {
       url: '/signin',
-      templateUrl: 'signin'
+      templateUrl: 'signin/signin.html',
+      controller: 'signin'
     })
     .state('newUser', {
       url: '/newuser',
