@@ -5,5 +5,5 @@ angular.module('neighborhoodwatch.video', [])
   $scope.report = function() {
 
   };
-  
+
 });
