@@ -19,6 +19,11 @@ angular.module('neighborhoodwatch', ['ui.router', 'neighborhoodwatch.home', 'nei
       url: '/newuser',
       templateUrl: 'newuser/newuser.html',
       controller: 'newuser'
+    })
+    .state('video', {
+      url: '/video',
+      templateUrl: 'video/video.html',
+      controller: 'video'
     });
 
 });
