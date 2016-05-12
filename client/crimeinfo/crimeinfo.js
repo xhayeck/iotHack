@@ -1,4 +1,4 @@
-angular.module('neighborhoodwatch.crimeinfo', []) 
+angular.module('neighborhoodwatch.crimeinfo', [])
 
 .controller('crimeInfo', function($scope, $state) {
 

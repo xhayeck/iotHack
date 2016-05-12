@@ -1,12 +1,13 @@
 angular.module('neighborhoodwatch', [
   'ui.router',
-  'neighborhoodwatch.home', 
-  'neighborhoodwatch.signin', 
+  'neighborhoodwatch.home',
+  'neighborhoodwatch.signin',
   'neighborhoodwatch.newuser',
   'neighborhoodwatch.video',
   'neighborhoodwatch.crimeinfo',
   'neighborhoodwatch.crimeform',
-  'neighborhoodwatch.crimeServices'
+  'neighborhoodwatch.crimeServices',
+  'neighborhoodwatch.userServices'
   ])
 
 .config(function($stateProvider, $urlRouterProvider) {
