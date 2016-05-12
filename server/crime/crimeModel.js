@@ -4,36 +4,36 @@ var CrimeSchema = new mongoose.Schema({
   type: {
     type: String,
     required: true,
-    unique: false
+    unique: true
   },
 
   message: {
     type: String,
-    required: true,
+    required: false,
     unique: false
   },
 
   time: {
     type: Date,
-    required: true,
+    required: false,
     unique: false
   },
 
   reportedBy: {
     type: String,
-    required: true,
+    required: false,
     unique: false
   },
 
   phoneNumber: {
     type: Number,
-    required: true,
+    required: false,
     unique: false
   },
 
   zipCode: {
     type: Number,
-    required: true,
+    required: false,
     unique: false
   }
 
