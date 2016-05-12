@@ -1,21 +1,19 @@
 angular.module('neighborhoodwatch.newuser', [])
 
-.controller('newuser', function($scope, $state) {
+.controller('newuser', function($scope, $state, Users) {
 
   $scope.home = function() {
     $state.go('home');
   };
 
-  $scope.username='';
-
-  $scope.password ='';
-
-  $scope.zipCode='';
-
-  $scope.phone='';
+  $scope.userInfo = {};
 
   $scope.submit= function() {
-    console.log($scope.username, $scope.password, $scope.zipCode, $scope.phone);
+    Users.createUser($scope.userInfo)
+      .then(function(data) {
+        $window.localStorage.setItem(data.token);
+        $state.go('video');
+      });
   };
 
 });
