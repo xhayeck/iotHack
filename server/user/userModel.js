@@ -6,23 +6,30 @@ var UserSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  
   email: {
     type: String,
-    required: false,
+    required: true,
+    unique: true
+  },
+
+  password: {
+    type: String,
+    required: true,
     unique: false
   },
 
   zipCode: {
     type: Number,
-    required: false,
+    required: true,
     unique: false
   },
 
   phoneNumber: {
     type: Number,
-    required: false,
-    unique: false
+    required: true,
+    unique: true
   }
-})
+});
 
 module.exports = mongoose.model('user', UserSchema);
