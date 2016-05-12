@@ -1,5 +1,4 @@
-
-  angular.module('neighborhoodwatch.crimeform', [])
+angular.module('neighborhoodwatch.crimeform', [])
   .controller('crimeform', ['$scope', '$state', 'Crimes', function($scope, $state, Crimes){
 
     $scope.formData = {};
@@ -19,9 +18,9 @@
         type : $scope.type,
         zipCode : $scope.zipCode,
         email: $scope.email,
-        phoneNumber: $scope.phoneNumber
+        phoneNumber: $scope.phoneNumber,
+        reportedBy: $scope.reportedBy
       });
-
       $state.go('video');
     }
   }]);
