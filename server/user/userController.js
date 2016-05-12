@@ -1,12 +1,6 @@
 var User = require ('./userModel.js');
 var Q = require('q');
 
-// var userTest = {};
-// userTest.name = "Snoop1 Dogg";
-// userTest.zipCode = 12345;
-// userTest.phoneNumber = 55512345671;
-// userTest.email = "snoop@dogg1.com";
-
 module.exports = {
 
   getAllUsers: function(req, res, next){
@@ -17,6 +11,7 @@ module.exports = {
   },
 
   addNewUser: function(req, res, next){
+
     var name = req.body.name;
 
     // var newUser = new User(userTest);
@@ -28,7 +23,7 @@ module.exports = {
         } else {
           var newUser = new User(req.body);
           newUser.save()
-            .then(function() {
+            .then(function(userling) {
               res.status(200).send({name: name});
             })
             .catch(function(err) {

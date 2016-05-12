@@ -5,9 +5,12 @@ angular.module('neighborhoodwatch.userServices', [])
   var users = {};
 
   users.createUser = function(userData) {
+    console.log('');
+    console.log('userData: ', userData);
+    console.log('');
     return $http({
       method: 'POST',
-      url: '/api/addNewUser',
+      url: '/api/users/addNewUser',
       data: userData
     })
     .then(function(data) {
@@ -15,6 +18,7 @@ angular.module('neighborhoodwatch.userServices', [])
     }, function(err) {
       return err;
     });
+
   };
 
   users.login = function(userData) {
