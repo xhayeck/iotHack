@@ -1,9 +1,9 @@
 'use strict'
 
-var express = require('express');
-var app = express();
-var port = process.env.PORT || 3000;
-var db = require('./db.js');
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+const db = require('./db.js');
 
 
 app.use(express.static(__dirname + "/../client"));
