@@ -1,6 +1,12 @@
 var User = require ('./userModel.js');
 var Q = require('q');
 
+// var userTest = {};
+// userTest.name = "John Smith";
+// userTest.zipCode = 12345;
+// userTest.email = "johnsmith@gmail.com";
+// userTest.phoneNumber = 5551234567;
+
 module.exports = {
 
   getAllUsers: function(req, res, next){
@@ -13,14 +19,15 @@ module.exports = {
   addNewUser: function(req, res, next){
 
     var name = req.body.name;
+    // var name = "John Smith"
 
-    // var newUser = new User(userTest);
     var findUser = Q.nbind(User.findOne, User);
     findUser({name: name})
       .then(function(user) {
         if(user) {
           res.status(200).send('User already in the system');
         } else {
+          // var newUser = new User(userTest);
           var newUser = new User(req.body);
           newUser.save()
             .then(function(userling) {
