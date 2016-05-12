@@ -11,7 +11,8 @@ angular.module('neighborhoodwatch.newuser', [])
   $scope.submit= function() {
     Users.createUser($scope.userInfo)
       .then(function(data) {
-
+        $window.localStorage.setItem(data.token);
+        $state.go('video');
       });
   };
 
