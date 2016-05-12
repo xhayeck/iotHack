@@ -3,38 +3,37 @@ var mongoose = require('mongoose');
 var CrimeSchema = new mongoose.Schema({
   type: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
 
   message: {
     type: String,
-    required: false,
-    unique: false
+    required: true
   },
 
   time: {
     type: Date,
-    required: false,
-    unique: false
+    required: true
   },
 
   reportedBy: {
     type: String,
-    required: false,
-    unique: false
+    required: true
   },
 
   phoneNumber: {
     type: Number,
-    required: false,
-    unique: false
+    required: true
   },
 
   zipCode: {
     type: Number,
-    required: false,
-    unique: false
+    required: true
+  },
+
+  email: {
+    type: String,
+    required: true
   }
 
 });
