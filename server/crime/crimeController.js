@@ -1,12 +1,13 @@
 var Crime = require('./crimeModel.js');
 
-var crimeTest = {};
-crimeTest.type = "Murder";
-crimeTest.message = "Help! He's coming for me next!";
-crimeTest.time = Date.now();
-crimeTest.reportedBy = "John Smith";
-crimeTest.phoneNumber = 5551234567;
-crimeTest.zipCode = 12345;
+// var crimeTest = {};
+// crimeTest.type = "Murder";
+// crimeTest.message = "Help! He's coming for me next!";
+// crimeTest.time = Date.now();
+// crimeTest.reportedBy = "John Smith";
+// crimeTest.phoneNumber = 5551234567;
+// crimeTest.zipCode = 12345;
+// crimeTest.email = "johnsmith@gmail.com";
 
 module.exports = {
 
