@@ -1,4 +1,4 @@
-'use strict';
+'use strict'
 
 module.exports = function(app, express){
 
@@ -11,4 +11,4 @@ module.exports = function(app, express){
   require('../crime/crimeRoutes.js')(crimeRouter);
   require('../user/userRoutes.js')(userRouter);
 
-};
+}
