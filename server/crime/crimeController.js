@@ -19,6 +19,7 @@ module.exports = {
   },
 
   addNewCrime: function(req, res, next){
+    req.body.time = Date.now();
     var newCrime = new Crime(req.body);
     // var newCrime = new Crime(crimeTest);
     newCrime.save()
